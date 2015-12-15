@@ -1,0 +1,31 @@
+{
+  "name": "battlefleet",
+  "version": "0.1.0",
+  "description": "Collaborative 4-player battleship",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gundb/battlefleet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gundb/battlefleet/issues"
+  },
+  "keywords": [
+    "battleship",
+    "collaborative",
+    "real-time",
+    "offline",
+    "gun",
+    "4player",
+    "game"
+  ],
+  "author": "Jesse Gibson",
+  "license": "(Zlib OR MIT OR Apache-2.0)",
+  "dependencies": {
+    "express": "^4.13.3",
+    "gun-level": "^2.1.0"
+  }
+}
