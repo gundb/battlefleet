@@ -1,5 +1,6 @@
-var Gun, express, app, port = process.argv[2] || 3000;
+var Gun, express, app, port;
 
+port = process.env.PORT || process.argv[2] || 3000;
 Gun = require('gun-level');
 express = require('express');
 app = express();

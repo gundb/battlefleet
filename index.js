@@ -12,6 +12,10 @@
     Once each spot is taken, begin the game.
 */
 
+
+function index() {
+    
+}
 var index = (function() {
     var self = this;
     
