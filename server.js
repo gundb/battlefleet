@@ -6,12 +6,12 @@ app = express();
 
 Gun({
   level: {
-    blaze: 'game'
+    blaze: 'game-state'
   }
 }).attach(app);
 
 app.use('/', express['static'](__dirname));
 
-// app.listen(port, function () {
-//   console.log('Listening on port', port);
-// });
+app.listen(port, function () {
+  console.log('Listening on port', port);
+});

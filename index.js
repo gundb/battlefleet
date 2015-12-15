@@ -1,3 +1,17 @@
+/*
+    |----------------|
+    |   1    |    2  |
+    |--------+-------|
+    |   3    |    4  |
+    |----------------|
+    
+    Push initial data, subscribing
+    to changes. If the player is
+    not taken, claim the spot.
+    
+    Once each spot is taken, begin the game.
+*/
+
 var index = (function() {
     var self = this;
     
@@ -5,7 +19,7 @@ var index = (function() {
 
 	self.arrChar = function (char) {
 		return self.arr.indexOf(char);
-	}
+	};
     
     return self;
 })();
