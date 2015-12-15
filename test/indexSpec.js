@@ -1,23 +1,26 @@
 var assert = require('assert'); 
-var Gun = require('gun-level');
-var index = require('../index');
-// var remove = require('gun-level/spec/remove')
-// remove('folder/file to remove')
+var setPlayers = require('../setPlayers');
 
-
-describe('the INDEX', function() {
+describe('The setPlayers function', function() {
 	var gun;
 	
 	beforeEach(function () {
 		// Prevent gun-level from saving to
 		// the file system by passing false.
-		gun = new Gun({
-			level: false
-		}).get('battlefleet/players/test').set();
+		gun = setPlayers('battlefleet/players/test');
 	});
 	
 	it('should export a function', function () {
-		assert.isFunction(index);
+		assert.equal(setPlayers.constructor, Function);
+	});
+	
+	it('should populate the players collection', function (done) {
+		this.timeout(1000);
+		gun.path('players').val(function (players) {
+			var length = Object.keys(players).length;
+			assert.equal(length, 4);
+			done();
+		});
 	});
 	
 });

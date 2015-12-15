@@ -11,21 +11,31 @@
     
     Once each spot is taken, begin the game.
 */
+var Gun = require('gun-level');
+var gun = Gun({
+    level: {
+        blaze: 'game-state'
+    }
+});
 
-
-function index() {
-    
+function setPlayers(collection) {
+    // set the players
+    return gun.get(collection).set()
+        .path('players').put({
+            1: {
+                num: 1
+            },
+            2: {
+                num: 2
+            },
+            3: {
+                num: 3
+            },
+            4: {
+                num: 4
+            }
+        });
 }
-var index = (function() {
-    var self = this;
-    
-    self.arr = [1,2,3];
 
-	self.arrChar = function (char) {
-		return self.arr.indexOf(char);
-	};
-    
-    return self;
-})();
 
-module.exports = index;
+module.exports = setPlayers;
