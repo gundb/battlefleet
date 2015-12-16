@@ -1,8 +1,8 @@
 #war_container{
-    display: table-cell;
+    display: inline-block;
     width:500px;
     height:500px;
-    /*position:absolute;*/
+    /*position:relative;*/
 }
 
 .first, .second, .third, .fourth{
