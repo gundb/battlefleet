@@ -3,11 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "start": "node ./bin/www",
     "build": "webpack index.js --output --watch bundle.js"
   },
   "dependencies": {
     "express": "~4.13.1",
-    "gun-level": "^2.1.1"
+    "gun": "^0.2.5",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1"
   }
 }

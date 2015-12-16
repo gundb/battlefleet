@@ -14,6 +14,38 @@
   		<div class="third"></div>
   		<div class="fourth"></div>
   	</div>
+  	<script type="text/javascript" src="gun.js"></script>
   	<script type="text/javascript" src="bundle.js"></script>
+  	<script>
+  	  // create 40 cells
+      // divide them into 4 classes
+      var classes = ['one', 'two', 'three', 'four'];
+      function create(element) {
+          return document.createElement(element);
+      }
+      function append(element, parent) {
+          var child = create(element);
+          parent.appendChild(child);
+          return child;
+      }
+      function populate(row, y) {
+          for (var x = 0; x < 20; x++) {
+              var cell = append('td', row);
+              var number = x < 10 ? 1 : 2;
+              var top = y < 10 ? 1 : 2;
+              var left = x < 10 ? 1 : 2;
+              var className = classes[number];
+              cell.className = className;
+              cell.id = x + ':' + y;
+          }
+      }
+      var table = create('table');
+      for (var y = 0; y < 20; y++) {
+          var row = append('tr', table);
+          populate(row, y);
+      }
+      document.body.appendChild(table);
+
+  	</script>
   </body>
 </html>

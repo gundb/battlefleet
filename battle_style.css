@@ -1,0 +1,47 @@
+#war_container{
+    display: table-cell;
+    width:500px;
+    height:500px;
+    /*position:absolute;*/
+}
+
+.first, .second, .third, .fourth{
+    margin:0;
+}
+
+.first{
+    height:250px;
+    width:250px;
+    background-color:#9cccea;
+    /*float:left;*/
+}
+
+.second{
+    height:250px;
+    width:250px;
+    background-color:#ec6859;
+    /*float:right;*/
+}
+
+.third{
+    width:250px;
+    height:250px;
+    background-color:#7ad885;
+    /*float:right;*/
+}
+
+.fourth{
+    width:250px;
+    height:250px;
+    background-color:#ffd348;
+    /*float:left;*/
+}
+table {
+    width: 50vw;
+    height: 50vw;
+}
+td {
+    border: 1px solid black;
+    width: calc(100vw / 400);
+    height: calc(100vw / 400);
+}

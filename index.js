@@ -1,3 +1,4 @@
+/*globals Gun */
 /*
     |----------------|
     |   1    |    2  |
@@ -11,12 +12,13 @@
     
     Once each spot is taken, begin the game.
 */
-var Gun = require('gun-level');
+var Gun = Gun || require('gun');
 var gun = Gun({
     level: {
         blaze: 'game-state'
     }
 });
+// require('./setup');
 
 function setPlayers(collection) {
     // set the players
@@ -36,6 +38,5 @@ function setPlayers(collection) {
             }
         });
 }
-
 
 module.exports = setPlayers;
