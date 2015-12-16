@@ -4,7 +4,7 @@ var init = require('../input/initiator');
 // var remove = require('gun-level/spec/remove')
 // remove('folder/file to remove')
 
-describe.only('the INITIATOR module', function() {
+describe('the INITIATOR module', function() {
 	
 	it('should build a blank board for the given gun path', function() {
 		

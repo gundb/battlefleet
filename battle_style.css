@@ -2,6 +2,8 @@
     display: inline-block;
     width:500px;
     height:500px;
+    box-sizing: border-box;
+    z-index:-1000;
     /*position:relative;*/
 }
 

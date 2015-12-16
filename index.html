@@ -25,47 +25,6 @@
   	<script type="text/javascript" src="gun.js"></script>
   	<script type="text/javascript" src="bundle.js"></script>
   	<script>
-  	  // create 40 cells
-      // divide them into 4 classes
-      var classes = [
-        ['first', 'second'],
-        ['third', 'fourth']
-      ];
-      function create(element) {
-        return document.createElement(element);
-      }
-      function append(element, parent) {
-        var child = create(element);
-        parent.appendChild(child);
-        return child;
-      }
-      function getClass(x, y) {
-        var top = y < 10 ? 0 : 1;
-        var left = x < 10 ? 0 : 1;
-        return classes[top][left];
-      }
-      function getContainer(x, y) {
-        var selector = '.' + getClass(x, y);
-        selector += ' table';
-        return document.querySelector(selector);
-      }
-      function populate(row, x, y) {
-        var cell = append('td', row);
-        cell.id = x + ':' + y;
-      }
-      var table = create('table');
-      for (var y = 0; y < 20; y++) {
-        for (var x = 0; x < 20; x++) {
-          var table = getContainer(x, y);
-          var row = append('tr', table);
-          populate(row, x, y);
-        }
-        
-        var row = append('tr', table);
-        populate(row, y);
-      }
-      document.body.appendChild(table);
-
   	</script>
   </body>
 </html>

@@ -12,11 +12,10 @@
     
     Once each spot is taken, begin the game.
 */
-var Gun = Gun || require('gun');
+var Gun = require('gun');
+require('./setup/generate-table');
 var gun = Gun({
-    level: {
-        blaze: 'game-state'
-    }
+    file: 'game-state'
 });
 // require('./setup');
 
